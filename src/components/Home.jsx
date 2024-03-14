@@ -23,7 +23,7 @@ function Home() {
         console.log(error);
       }
   return (
-    <div>Home</div>
+    <div className='h-screen bg-slate-400'>Home</div>
   )
 }
 
