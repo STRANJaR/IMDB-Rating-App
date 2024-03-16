@@ -1,6 +1,8 @@
 import axios from "axios"
 import { useState } from "react";
 import { RiStarSFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
+import { RiExternalLinkLine } from "react-icons/ri";
 
 
 function Movies() {
@@ -26,11 +28,11 @@ function Movies() {
         getData()
     },[])
   return (
-    <section className="w-auto h-screen">
+    <section className="bg-black text-white w-auto h-auto">
         <div className="flex flex-wrap">
 
     {movies.map((movie)=> (
-        <div key={movie._id} className="bg-green-300 m-3 w-48">
+        <div key={movie._id} className="bg-[#1A1A1A] m-3 pb-3 w-48 rounded-sm flex flex-col justify-between">
             <div className="">
                 <img src={movie.poster_path} alt="" width="200px"/>
 
@@ -42,6 +44,13 @@ function Movies() {
                 <h1
                 className="text-1xl"
                 >{movie.title}</h1>
+            </div>
+
+            <div className="p-2 flex justify-center ">
+                <Link 
+                className="bg-purple-700 items-center w-40   p-2 flex justify-center rounded-sm hover:bg-purple-600 transition-all">
+                    View More <RiExternalLinkLine className="ml-2"/>
+                </Link>
             </div>
         </div>
     ))}
