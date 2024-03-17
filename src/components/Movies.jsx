@@ -32,6 +32,7 @@ function Movies() {
         <div className="flex flex-wrap">
 
     {movies.map((movie)=> (
+        
         <div key={movie._id} className="bg-[#1A1A1A] m-3 pb-3 w-48 rounded-sm flex flex-col justify-between">
             <div className="">
                 <img src={movie.poster_path} alt="" width="200px"/>

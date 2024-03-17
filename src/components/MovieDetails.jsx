@@ -1,8 +1,10 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 function MovieDetails() {
+  const {movieId} = useParams()
   return (
-    <div>MovieDetails</div>
+    <div>MovieDetails: {movieId}</div>
   )
 }
 
