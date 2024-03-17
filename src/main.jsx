@@ -6,6 +6,7 @@ import Layout from './components/Layout.jsx'
 import Home from './components/Home.jsx'
 import Movies from './components/Movies.jsx'
 import MovieDetails from './components/MovieDetails.jsx'
+import Shows from './components/Shows.jsx'
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/movies",
         element: <Movies/>,
+      },
+      {
+        path: "/shows",
+        element: <Shows/>
       },
       {
         path: "/movie/:movieId",
